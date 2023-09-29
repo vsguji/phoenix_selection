@@ -2,7 +2,7 @@
  * @Author: lipeng 1162423147@qq.com
  * @Date: 2023-09-13 20:09:03
  * @LastEditors: lipeng 1162423147@qq.com
- * @LastEditTime: 2023-09-23 20:20:57
+ * @LastEditTime: 2023-09-29 21:01:53
  * @FilePath: /phoenix_selection/lib/widget/selection_list_widget.dart
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -13,6 +13,7 @@ import 'package:phoenix_btn/button/big_main_button.dart';
 
 import '../bean/selection_common_entity.dart';
 import '../config/selection_config.dart';
+import '../extension/selection_assets.dart';
 import '../selection_util.dart';
 import 'selection_menu_widget.dart';
 import 'selection_single_list_widget.dart';
@@ -272,7 +273,8 @@ class _BrnSelectionGroupViewState extends State<BrnListSelectionGroupWidget> {
                         height: 24,
                         width: 24,
                         child: PhoenixTools.getAssetImage(
-                            BaseAsset.iconSelectionReset),
+                            SelectionAssets.iconSelectionReset,
+                            package: 'phoenix_selection'),
                       ),
                       Text(
                         BrnIntl.of(context).localizedResource.reset,

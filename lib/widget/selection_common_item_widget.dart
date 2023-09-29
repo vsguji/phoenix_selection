@@ -3,6 +3,7 @@ import 'package:phoenix_base/phoenix.dart';
 
 import '../bean/selection_common_entity.dart';
 import '../config/selection_config.dart';
+import '../extension/selection_assets.dart';
 import '../selection_util.dart';
 
 /// [BrnSelectionSingleListWidget] 子组件中的单项
@@ -53,8 +54,10 @@ class SelectionCommonItemWidget extends StatelessWidget {
           width: 21,
           child: (item.isSelected)
               ? PhoenixTools.getAssetImageWithBandColor(
-                  BaseAsset.iconMultiSelected)
-              : PhoenixTools.getAssetImage(BaseAsset.iconUnSelect),
+                  SelectionAssets.iconMultiSelected,
+                  package: 'phoenix_selection')
+              : PhoenixTools.getAssetImage(SelectionAssets.iconUnSelect,
+                  package: 'phoenix_selection'),
         );
       } else {
         checkbox = Container();

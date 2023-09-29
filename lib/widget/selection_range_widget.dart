@@ -9,6 +9,7 @@ import 'package:phoenix_toast/phoenix_toast.dart';
 
 import '../bean/selection_common_entity.dart';
 import '../config/selection_config.dart';
+import '../extension/selection_assets.dart';
 import '../selection_util.dart';
 import 'selection_menu_widget.dart';
 import 'selection_range_input_item_widget.dart';
@@ -375,7 +376,8 @@ class _RangeSelectionGroupWidgetState extends State<RangeSelectionGroupWidget>
                     height: 24,
                     width: 24,
                     child: PhoenixTools.getAssetImage(
-                        BaseAsset.iconSelectionReset),
+                        SelectionAssets.iconSelectionReset,
+                        package: 'phoenix_selection'),
                   ),
                   Text(
                     BrnIntl.of(context).localizedResource.reset,

@@ -9,3 +9,7 @@
 ## 1.0.0
 
 * [新建] 基础Selection组件
+
+## 1.0.1
+
+* [更新] resource path

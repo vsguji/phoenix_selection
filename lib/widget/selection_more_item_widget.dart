@@ -1,3 +1,11 @@
+/*
+ * @Author: lipeng 1162423147@qq.com
+ * @Date: 2023-09-23 20:39:39
+ * @LastEditors: lipeng 1162423147@qq.com
+ * @LastEditTime: 2023-09-29 21:02:32
+ * @FilePath: /phoenix_selection/lib/widget/selection_more_item_widget.dart
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,6 +16,7 @@ import 'package:phoenix_toast/phoenix_toast.dart';
 
 import '../bean/selection_common_entity.dart';
 import '../config/selection_config.dart';
+import '../extension/selection_assets.dart';
 import '../more_selection.dart';
 import '../selection_util.dart';
 import '../selection_view.dart';
@@ -330,7 +339,9 @@ class __MoreArrowState extends State<_MoreArrow> {
 
   @override
   Widget build(BuildContext context) {
-    String asset = isExpanded ? BaseAsset.iconUpArrow : BaseAsset.iconDownArrow;
+    String asset = isExpanded
+        ? SelectionAssets.iconUpArrow
+        : SelectionAssets.iconDownArrow;
 
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
@@ -355,9 +366,8 @@ class __MoreArrowState extends State<_MoreArrow> {
               height: 16,
               width: 16,
               padding: EdgeInsets.only(left: 4),
-              child: PhoenixTools.getAssetImage(
-                asset,
-              ),
+              child: PhoenixTools.getAssetImage(asset,
+                  package: 'phoenix_selection'),
             )
           ],
         ),
@@ -665,7 +675,9 @@ class _FilterLayerTypeWidgetState
                 Container(
                   height: 16,
                   width: 16,
-                  child: PhoenixTools.getAssetImage(BaseAsset.iconRightArrow),
+                  child: PhoenixTools.getAssetImage(
+                      SelectionAssets.iconRightArrow,
+                      package: 'phoenix_selection'),
                 )
               ],
             ),

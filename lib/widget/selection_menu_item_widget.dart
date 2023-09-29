@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:phoenix_base/phoenix.dart';
 
 import '../config/selection_config.dart';
+import '../extension/selection_assets.dart';
 
 /// 筛选菜单项
 // ignore: must_be_immutable
@@ -62,16 +63,20 @@ class BrnSelectionMenuItemWidget extends StatelessWidget {
                   child: isHighLight
                       ? (active
                           ? PhoenixTools.getAssetImageWithBandColor(
-                              BaseAsset.iconArrowUpSelect,
+                              SelectionAssets.iconArrowUpSelect,
+                              package: 'phoenix_selection',
                               configId: themeData.configId)
                           : PhoenixTools.getAssetImageWithBandColor(
-                              BaseAsset.iconArrowDownSelect))
+                              SelectionAssets.iconArrowDownSelect,
+                              package: 'phoenix_selection'))
                       : (active
                           ? PhoenixTools.getAssetImageWithBandColor(
-                              BaseAsset.iconArrowUpSelect,
-                              configId: themeData.configId)
+                              SelectionAssets.iconArrowUpSelect,
+                              configId: themeData.configId,
+                              package: 'phoenix_selection')
                           : PhoenixTools.getAssetImage(
-                              BaseAsset.iconArrowDownUnSelect)))
+                              SelectionAssets.iconArrowDownUnSelect,
+                              package: 'phoenix_selection')))
             ],
           ),
         ),

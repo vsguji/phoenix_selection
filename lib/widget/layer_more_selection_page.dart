@@ -7,6 +7,7 @@ import 'package:phoenix_toast/phoenix_toast.dart';
 
 import '../bean/selection_common_entity.dart';
 import '../config/selection_config.dart';
+import '../extension/selection_assets.dart';
 import '../more_selection.dart';
 import '../selection_util.dart';
 
@@ -456,8 +457,10 @@ class _LayerMoreSelectionPageState extends State<LayerMoreSelectionPage>
             width: 16,
             child: entity.isSelected
                 ? PhoenixTools.getAssetImageWithBandColor(
-                    BaseAsset.selectCheckedStatus)
-                : PhoenixTools.getAssetImage(BaseAsset.iconUnSelect),
+                    SelectionAssets.selectCheckedStatus,
+                    package: 'phoenix_selection')
+                : PhoenixTools.getAssetImage(SelectionAssets.iconUnSelect,
+                    package: 'phoenix_selection'),
           )
         ],
       );

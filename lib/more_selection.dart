@@ -6,6 +6,7 @@ import 'package:phoenix_line/phoenix_line.dart';
 import 'package:phoenix_toast/toast.dart';
 
 import 'bean/selection_common_entity.dart';
+import 'extension/selection_assets.dart';
 import 'selection_util.dart';
 import 'selection_view.dart';
 import 'config/selection_config.dart';
@@ -312,8 +313,9 @@ class MoreBottomSelectionWidget extends StatelessWidget {
                 Container(
                   height: 24,
                   width: 24,
-                  child:
-                      PhoenixTools.getAssetImage(BaseAsset.iconSelectionReset),
+                  child: PhoenixTools.getAssetImage(
+                      SelectionAssets.iconSelectionReset,
+                      package: 'phoenix_selection'),
                 ),
                 Text(
                   BrnIntl.of(context).localizedResource.reset,

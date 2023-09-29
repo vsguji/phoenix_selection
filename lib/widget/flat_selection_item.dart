@@ -8,6 +8,7 @@ import 'package:phoenix_toast/phoenix_toast.dart';
 import '../bean/selection_common_entity.dart';
 import '../config/selection_config.dart';
 import '../controller/flat_selection_controller.dart';
+import '../extension/selection_assets.dart';
 import '../selection_util.dart';
 import '../selection_view.dart';
 import 'layer_more_selection_page.dart';
@@ -370,7 +371,9 @@ class __MoreArrowState extends State<_MoreArrow> {
 
   @override
   Widget build(BuildContext context) {
-    String asset = isExpanded ? BaseAsset.iconUpArrow : BaseAsset.iconDownArrow;
+    String asset = isExpanded
+        ? SelectionAssets.iconUpArrow
+        : SelectionAssets.iconDownArrow;
 
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
@@ -393,9 +396,8 @@ class __MoreArrowState extends State<_MoreArrow> {
               height: 16,
               width: 16,
               padding: const EdgeInsets.only(left: 4),
-              child: PhoenixTools.getAssetImage(
-                asset,
-              ),
+              child: PhoenixTools.getAssetImage(asset,
+                  package: 'phoenix_selection'),
             )
           ],
         ),
@@ -692,7 +694,9 @@ class _FilterLayerTypeWidgetState extends State<FilterLayerTypeWidget> {
                 Container(
                   height: 16,
                   width: 16,
-                  child: PhoenixTools.getAssetImage(BaseAsset.iconRightArrow),
+                  child: PhoenixTools.getAssetImage(
+                      SelectionAssets.iconRightArrow,
+                      package: 'phoenix_selection'),
                 )
               ],
             ),
