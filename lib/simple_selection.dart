@@ -57,7 +57,7 @@ class SimpleSelection extends StatefulWidget {
     this.onMenuItemClick,
     this.themeData,
   })  : this.isRadio = true,
-        this.maxSelectedCount = BrnSelectionConstant.maxSelectCount,
+        this.maxSelectedCount = SelectionConstant.maxSelectCount,
         super(key: key);
 
   /// 多选构造函数
@@ -66,7 +66,7 @@ class SimpleSelection extends StatefulWidget {
     required this.menuName,
     this.menuKey = _defaultMenuKey,
     this.defaultValue,
-    this.maxSelectedCount = BrnSelectionConstant.maxSelectCount,
+    this.maxSelectedCount = SelectionConstant.maxSelectCount,
     required this.items,
     required this.onSimpleSelectionChanged,
     this.onMenuItemClick,

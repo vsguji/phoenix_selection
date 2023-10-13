@@ -2,7 +2,7 @@
  * @Author: lipeng 1162423147@qq.com
  * @Date: 2023-09-23 20:39:39
  * @LastEditors: lipeng 1162423147@qq.com
- * @LastEditTime: 2023-09-29 21:02:32
+ * @LastEditTime: 2023-10-13 11:36:22
  * @FilePath: /phoenix_selection/lib/widget/selection_more_item_widget.dart
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -300,8 +300,8 @@ class __FilterCommonTypeWidgetState extends State<_FilterCommonTypeWidget> {
   void _showDatePicker(SelectionEntity data) {
     int time =
         int.tryParse(data.value ?? "") ?? DateTime.now().millisecondsSinceEpoch;
-    BrnDatePicker.showDatePicker(context,
-        pickerMode: BrnDateTimePickerMode.date,
+    PhoenixDatePicker.showDatePicker(context,
+        pickerMode: DateTimePickerMode.date,
         pickerTitleConfig: PickerTitleConfig.Default,
         initialDateTime: DateTime.fromMillisecondsSinceEpoch(time),
         dateFormat: BrnIntl.of(context).localizedResource.dateFormatYYYYMMMMDD,

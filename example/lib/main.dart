@@ -1,4 +1,6 @@
+import 'package:example/selection_entry_page.dart';
 import 'package:flutter/material.dart';
+import 'package:phoenix_base/phoenix.dart';
 import 'package:phoenix_selection/phoenix_selection.dart';
 
 void main() {
@@ -13,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      localizationsDelegates: [BrnLocalizationDelegate.delegate],
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: SelectionEntryPage(),
     );
   }
 }

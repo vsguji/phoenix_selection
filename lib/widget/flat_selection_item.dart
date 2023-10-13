@@ -337,8 +337,8 @@ class __FilterCommonTypeWidgetState extends State<_FilterCommonTypeWidget> {
   void _showDatePicker(SelectionEntity data) {
     int time =
         int.tryParse(data.value ?? "") ?? DateTime.now().millisecondsSinceEpoch;
-    BrnDatePicker.showDatePicker(context,
-        pickerMode: BrnDateTimePickerMode.date,
+    PhoenixDatePicker.showDatePicker(context,
+        pickerMode: DateTimePickerMode.date,
         pickerTitleConfig: PickerTitleConfig.Default,
         initialDateTime: DateTime.fromMillisecondsSinceEpoch(time),
         dateFormat: BrnIntl.of(context).localizedResource.dateFormatYYYYMMMMDD,

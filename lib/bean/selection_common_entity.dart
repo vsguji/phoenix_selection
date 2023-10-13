@@ -126,7 +126,7 @@ class SelectionEntity {
       this.type,
       this.showType,
       this.isCustomTitleHighLight = false,
-      this.maxSelectedCount = BrnSelectionConstant.maxSelectCount}) {
+      this.maxSelectedCount = SelectionConstant.maxSelectCount}) {
     filterType = parserFilterTypeWithType(type);
     filterShowType = parserShowType(showType);
     originalCustomMap = Map();
@@ -138,7 +138,7 @@ class SelectionEntity {
     this.value,
     this.title = '',
     this.type,
-  })  : maxSelectedCount = BrnSelectionConstant.maxSelectCount,
+  })  : maxSelectedCount = SelectionConstant.maxSelectCount,
         isCustomTitleHighLight = false,
         isSelected = false,
         children = [],
@@ -161,9 +161,9 @@ class SelectionEntity {
     if (map['maxSelectedCount'] != null &&
         int.tryParse(map['maxSelectedCount']) != null) {
       entity.maxSelectedCount = int.tryParse(map['maxSelectedCount']) ??
-          BrnSelectionConstant.maxSelectCount;
+          SelectionConstant.maxSelectCount;
     } else {
-      entity.maxSelectedCount = BrnSelectionConstant.maxSelectCount;
+      entity.maxSelectedCount = SelectionConstant.maxSelectCount;
     }
     entity.extMap = map['ext'] ?? {};
     if (map['children'] != null && map['children'] is List) {
@@ -176,7 +176,7 @@ class SelectionEntity {
 
   SelectionEntity.fromJson(Map<dynamic, dynamic>? map)
       : title = '',
-        maxSelectedCount = BrnSelectionConstant.maxSelectCount,
+        maxSelectedCount = SelectionConstant.maxSelectCount,
         isCustomTitleHighLight = false,
         isSelected = false,
         children = [],
@@ -191,7 +191,7 @@ class SelectionEntity {
     if (map['maxSelectedCount'] != null &&
         int.tryParse(map['maxSelectedCount']) != null) {
       maxSelectedCount = int.tryParse(map['maxSelectedCount']) ??
-          BrnSelectionConstant.maxSelectCount;
+          SelectionConstant.maxSelectCount;
     }
     extMap = map['ext'] ?? {};
     children = []
@@ -431,7 +431,7 @@ class SelectionEntity {
   SelectionEntity getRootEntity(SelectionEntity rootEntity) {
     if (rootEntity.parent == null ||
         rootEntity.parent!.maxSelectedCount ==
-            BrnSelectionConstant.maxSelectCount) {
+            SelectionConstant.maxSelectCount) {
       return rootEntity;
     } else {
       return getRootEntity(rootEntity.parent!);

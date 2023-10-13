@@ -1,6 +1,6 @@
 name: phoenix_selection
 description: phoenix 将做为企业级基础组件:Selection组件,提供项目支持。
-version: 1.0.1
+version: 1.0.3
 homepage: 'https://github.com/vsguji/phoenix_selection.git'
 
 environment:
@@ -10,14 +10,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  phoenix_base: ^1.0.6
+  phoenix_base: ^1.1.9
   phoenix_picker: ^1.0.0
   phoenix_line: ^1.0.0
   phoenix_toast: ^1.0.0
   phoenix_popup: ^1.0.2
-  phoenix_btn: ^1.0.1
+  phoenix_btn: ^1.0.8
   bindings_compatible: ^1.0.1
-  phoenix_tabbar: ^1.0.1
+  phoenix_tabbar: ^1.0.2
   phoenix_calendar: ^1.0.0
 dev_dependencies:
   flutter_test:
