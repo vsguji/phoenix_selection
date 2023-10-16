@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:phoenix_selection/phoenix_selection.dart';
 
-class BrnSelectionDatePickerAnimationWidget extends StatefulWidget {
+class SelectionDatePickerAnimationWidget extends StatefulWidget {
   final SelectionDatePickerController controller;
   final Widget view;
   final int animationMilliseconds;
 
-  const BrnSelectionDatePickerAnimationWidget(
+  const SelectionDatePickerAnimationWidget(
       {Key? key,
       required this.controller,
       required this.view,
@@ -14,12 +14,12 @@ class BrnSelectionDatePickerAnimationWidget extends StatefulWidget {
       : super(key: key);
 
   @override
-  _BrnSelectionDatePickerAnimationWidgetState createState() =>
-      _BrnSelectionDatePickerAnimationWidgetState();
+  _SelectionDatePickerAnimationWidgetState createState() =>
+      _SelectionDatePickerAnimationWidgetState();
 }
 
-class _BrnSelectionDatePickerAnimationWidgetState
-    extends State<BrnSelectionDatePickerAnimationWidget>
+class _SelectionDatePickerAnimationWidgetState
+    extends State<SelectionDatePickerAnimationWidget>
     with SingleTickerProviderStateMixin {
   bool _isControllerDisposed = false;
   Animation<double>? _animation;

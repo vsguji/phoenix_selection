@@ -1,5 +1,13 @@
 /*
  * @Author: lipeng 1162423147@qq.com
+ * @Date: 2023-10-13 11:21:49
+ * @LastEditors: lipeng 1162423147@qq.com
+ * @LastEditTime: 2023-10-16 13:24:39
+ * @FilePath: /phoenix_selection/example/lib/widget/selection_menu_item_widget.dart
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
+/*
+ * @Author: lipeng 1162423147@qq.com
  * @Date: 2022-04-29 17:06:50
  * @LastEditors: lipeng 1162423147@qq.com
  * @LastEditTime: 2023-10-13 10:46:34
@@ -12,7 +20,7 @@ import 'package:phoenix_selection/extension/selection_assets.dart';
 import 'package:phoenix_selection/phoenix_selection.dart' as phoenix;
 
 // ignore: must_be_immutable
-class BrnSelectionMenuItemWidget extends StatelessWidget {
+class SelectionMenuItemWidget extends StatelessWidget {
   final String title;
   final bool isHighLight;
   final bool active;
@@ -20,7 +28,7 @@ class BrnSelectionMenuItemWidget extends StatelessWidget {
 
   phoenix.SelectionConfig themeData;
 
-  BrnSelectionMenuItemWidget(
+  SelectionMenuItemWidget(
       {Key? key,
       required this.title,
       this.isHighLight = false,

@@ -2,19 +2,19 @@
  * @Author: lipeng 1162423147@qq.com
  * @Date: 2022-04-29 17:06:50
  * @LastEditors: lipeng 1162423147@qq.com
- * @LastEditTime: 2023-10-13 10:40:00
+ * @LastEditTime: 2023-10-16 13:24:03
  * @FilePath: /phoenix_selection/example/lib/widget/brn_selection_animate_widget.dart
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import 'package:flutter/material.dart';
 import 'package:phoenix_selection/phoenix_selection.dart';
 
-class BrnSelectionAnimationWidget extends StatefulWidget {
+class SelectionAnimationWidget extends StatefulWidget {
   final SelectionListViewController controller;
   final Widget view;
   final int animationMilliseconds;
 
-  const BrnSelectionAnimationWidget({
+  const SelectionAnimationWidget({
     Key? key,
     required this.controller,
     required this.view,
@@ -22,12 +22,11 @@ class BrnSelectionAnimationWidget extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _BrnSelectionAnimationWidgetState createState() =>
-      _BrnSelectionAnimationWidgetState();
+  _SelectionAnimationWidgetState createState() =>
+      _SelectionAnimationWidgetState();
 }
 
-class _BrnSelectionAnimationWidgetState
-    extends State<BrnSelectionAnimationWidget>
+class _SelectionAnimationWidgetState extends State<SelectionAnimationWidget>
     with SingleTickerProviderStateMixin {
   bool _isControllerDisposed = false;
   late AnimationController _animationController;
